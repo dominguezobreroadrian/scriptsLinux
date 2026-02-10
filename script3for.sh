@@ -11,7 +11,10 @@ cd "$dir"
 
 for fich in *
 do
-   contador=`expr $contador + 1`
+   if test -e $fich
+   then
+      contador=`expr $contador + 1`
+   fi
 done
 
 echo En el directorio $dir hay $contador ficheros
