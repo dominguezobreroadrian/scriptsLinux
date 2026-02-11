@@ -9,7 +9,7 @@ contador=0
 
 while (( numero >= 0 ))
 do
-	if (( numero % 2 == 0 ))
+	if (( numero % 2 = 0 ))
 	then
 		((contador++))
 	fi
