@@ -32,7 +32,7 @@ case $opcion in
 	fi;;
 3)
 	read -p "Indica el fichero a buscar": fichero
-	resultado=$(find / -type f -name "$fichero" 2>/dev/null)
+	resultado=`find / -type f -name "$fichero" 2>/dev/null`
 
 	if [ -z "$resultado" ]
 	then
