@@ -5,10 +5,14 @@
 # 2.-Introduce el grupo que quieres buscar (indicara si existe o no dicho grupo en el sistema)
 # 3.-Indica el fichero a buscar (indicara si existe el fichero o no y dara la ruta completa del mismo)
 
+while true
+do
+echo ---------------------------------------------
 echo Selecciona una opcion
 echo 1.-Introduciras un usuario que quieres buscar
 echo 2.-Introduciras un grupo que quieres buscar
 echo 3.-Indicaras el fichero a buscar
+echo 4.-Salir
 read opcion
 
 case $opcion in
@@ -42,6 +46,9 @@ case $opcion in
 		echo "Ruta completa:"
 		echo "$resultado"
 	fi;;
+4)
+	exit;;
 *)
 	echo Opcion no valida;;
 esac
+done
