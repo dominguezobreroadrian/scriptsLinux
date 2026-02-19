@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Autor: Adrián Domínguez Obrero
 # 3.-Debe indicar hoy es dia de mes de año
 # 6.-Calendario del mes que diga el usuario
 while true
