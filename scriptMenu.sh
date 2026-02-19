@@ -29,8 +29,14 @@ if [ -z $resultado ]
 then
 	echo No se encontro el fichero
 else
-	echo Se encontro:
-	grep "$textoBuscar" $resultado
+	encontrado=`grep "$textoBuscar" $resultado`
+	if [ -z $encontrado ]
+	then
+		echo No se encontro el texto en el fichero indicado
+	else
+		echo Se encontro:
+		echo $encontrado
+	fi
 fi
 echo -----------------------------------------------------------
 ;;
