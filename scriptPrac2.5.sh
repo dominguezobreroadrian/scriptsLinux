@@ -4,4 +4,4 @@
 
 read -p "Introduce que quieres hacer con los valores insertados sumar o multiplicar": entrada
 
-if [  ] 
+if [  ]
