@@ -25,7 +25,7 @@ then
         resultado=`expr $resultado \* $numero`
     fi
 else
-	echo Has introducido menos 2 dos parametros
+	echo Has introducido menos de 2 parametros
 fi
 done
 
