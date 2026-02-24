@@ -8,7 +8,7 @@ resultado=0
 
 if [ "$operacion" = "producto" ]
 then
-	resultado=1
+    resultado=1
 fi
 
 for numero in "$@"
