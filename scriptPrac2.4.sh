@@ -1,4 +1,5 @@
 #!/bin/bash
+# Autor: Adrián Domínguez Obrero
 
 if [ $# -eq 1 ]
 then
