@@ -2,20 +2,22 @@
 
 # Permita hacer la suma o el producto de todos los valores pasados por parámetros
 
-operacion=$1
-shift   # Elimina el primer parámetro (suma o producto)
+read -p "¿Quieres hacer suma o producto? " operacion
 
-if [ "$operacion" = "suma" ]
-then
-    resultado=0
-fi
+resultado=0
 
 if [ "$operacion" = "producto" ]
 then
     resultado=1
 fi
 
-for numero in $@
+if [ "$#" -eq 0 ]
+then
+    echo "No has introducido números."
+    exit 1
+fi
+
+for numero in "$@"
 do
     if [ "$operacion" = "suma" ]
     then
