@@ -3,27 +3,28 @@
 # Que te cuente el número de ficheros ejecutables que hay en un directorio que sera solicitado por teclado
 # Primero que diga el numero de ficheros y luego el nombre de los mismos
 
-read -p "Introduce el nombre del directorio": nombreDir
+read -p "Indique la ruta completa del directorio del que quieras la información: " directorio
 
-buscar=`find / -type d -name "$nombreDir" 2>/dev/null`
-contador=0
-almacenaNom=""
-
-if [ -z $buscar ]
+if [ -d $directorio ]
 then
-	echo El directorio no existe
-else
-	for i in *
-	do
-		if [ -x "$i" ]
-		then
-			((contador++))
-			almacenaNom=`"$almacenaNom"$'\n'"$i"`
-		fi
-	done
-fi
+cd "$directorio"
+ficheros=0
 
-echo El numero de ficheros es:
-echo "$contador"
-echo Los nombre de los ficheros son:
-echo "$almacenaNom"
+for i in *
+do
+    if [ -x $i ]
+    then
+        ((ficheros++))
+    fi
+done
+
+echo En el directorio $directorio hay $ficheros ficheros ejecutables.
+
+for i in *
+do
+    if [ -x $i ]
+    then
+        echo $i
+    fi
+done
+fi
